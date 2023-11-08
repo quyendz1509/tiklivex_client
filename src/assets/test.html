@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="loading">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button type="submit">Letgo</button>
+    </form>
+    <textarea id="result" name="" id="" cols="30" rows="10"></textarea>
+</body>
+<script>
+    const loading = document.getElementById("loading");
+    var result = document.getElementById("result");
+    loading.onsubmit = (event) => {
+        event.preventDefault();
+        let content = document.querySelector("textarea").value;
+        result.value = JSON.stringify(content);
+    };
+</script>
+
+</html>
